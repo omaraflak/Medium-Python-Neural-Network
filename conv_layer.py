@@ -3,10 +3,11 @@ from scipy import signal
 import numpy as np
 
 # inherit from base class Layer
+# This convolutional layer is always with stride 1
 class ConvLayer(Layer):
     # input_shape = (i,j,d)
-    # output_shape = (i-m+1,j-n+1,d)
     # kernel_shape = (m,n)
+    # layer_depth = output_depth
     def __init__(self, input_shape, kernel_shape, layer_depth):
         self.input_shape = input_shape;
         self.input_depth = input_shape[2];
