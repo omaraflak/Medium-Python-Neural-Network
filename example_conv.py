@@ -1,9 +1,4 @@
-from network import Network
-from fc_layer import FCLayer
-from conv_layer import ConvLayer
-from activation_layer import ActivationLayer
-from losses import *
-from activations import *
+from network import *
 import numpy as np
 
 # training data
