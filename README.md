@@ -5,6 +5,6 @@ This code is part of my post on **[medium](https://medium.com/@omaraflak/math-ne
 # Run it
 
 ```shell
-python example_xor.py
-python example_conv.py
+python lib/example_xor.py
+python lib/example_conv.py
 ```
