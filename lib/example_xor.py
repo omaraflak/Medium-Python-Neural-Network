@@ -1,5 +1,9 @@
-from network import *
 import numpy as np
+
+from network import Network
+from network.layers import FCLayer, ActivationLayer
+from network.activations import tanh, tanh_prime
+from network.losses import mse, mse_prime
 
 # training data
 x_train = np.array([[[0,0]], [[0,1]], [[1,0]], [[1,1]]])
