@@ -1,9 +1,10 @@
 import numpy as np
 
 from network import Network
-from network.layers import FCLayer, ActivationLayer
-from network.activations import tanh, tanh_prime
-from network.losses import mse, mse_prime
+from fc_layer import FCLayer
+from activation_layer import ActivationLayer
+from activations import tanh, tanh_prime
+from losses import mse, mse_prime
 
 # training data
 x_train = np.array([[[0,0]], [[0,1]], [[1,0]], [[1,1]]])
@@ -11,10 +12,10 @@ y_train = np.array([[[0]], [[1]], [[1]], [[0]]])
 
 # network
 net = Network()
-net.add(FCLayer((1,2), (1,3)))
-net.add(ActivationLayer((1,3), tanh, tanh_prime))
-net.add(FCLayer((1,3), (1,1)))
-net.add(ActivationLayer((1,1), tanh, tanh_prime))
+net.add(FCLayer(2, 3))
+net.add(ActivationLayer(tanh, tanh_prime))
+net.add(FCLayer(3, 1))
+net.add(ActivationLayer(tanh, tanh_prime))
 
 # train
 net.use(mse, mse_prime)

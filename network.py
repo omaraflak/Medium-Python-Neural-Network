@@ -1,5 +1,3 @@
-from layers import Layer
-
 class Network:
     def __init__(self):
         self.layers = []
@@ -24,7 +22,7 @@ class Network:
         # run network over all samples
         for i in range(samples):
             # forward propagation
-            output = input[i]
+            output = input_data[i]
             for layer in self.layers:
                 output = layer.forward_propagation(output)
             result.append(output)
