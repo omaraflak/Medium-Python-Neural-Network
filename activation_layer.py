@@ -2,16 +2,13 @@ from layer import Layer
 
 # inherit from base class Layer
 class ActivationLayer(Layer):
-    # input_shape = (1,i)   i the number of input neurons
-    def __init__(self, input_shape, activation, activation_prime):
-        self.input_shape = input_shape
-        self.output_shape = input_shape
+    def __init__(self, activation, activation_prime):
         self.activation = activation
         self.activation_prime = activation_prime
 
     # returns the activated input
-    def forward_propagation(self, input):
-        self.input = input
+    def forward_propagation(self, input_data):
+        self.input = input_data
         self.output = self.activation(self.input)
         return self.output
 

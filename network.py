@@ -16,9 +16,9 @@ class Network:
         self.loss_prime = loss_prime
 
     # predict output for given input
-    def predict(self, input):
+    def predict(self, input_data):
         # sample dimension first
-        samples = len(input)
+        samples = len(input_data)
         result = []
 
         # run network over all samples
