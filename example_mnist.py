@@ -8,7 +8,6 @@ from activation_layer import ActivationLayer
 from activations import tanh, tanh_prime
 from losses import mse, mse_prime
 
-import keras
 from keras.datasets import mnist
 from keras.utils import np_utils
 
