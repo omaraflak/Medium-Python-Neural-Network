@@ -2,6 +2,9 @@ from layer import Layer
 from scipy import signal
 import numpy as np
 
+## Math behind this layer can found at : 
+## https://medium.com/@2017csm1006/forward-and-backpropagation-in-convolutional-neural-network-4dfa96d7b37e
+
 # inherit from base class Layer
 # This convolutional layer is always with stride 1
 class ConvLayer(Layer):
